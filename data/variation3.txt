@@ -1,0 +1,71 @@
+Student1 
+2003
+65
+80                                  
+                                              MM                                
+                                   MN              MM                           
+                                                MMM    MN                       
+                                             N     MMM    MM                    
+                     MMMN M   MN M N             M     MMM   M                  
+                     M MMMN              MM   MM     MN    NM    M              
+                                      M           MM    MMM   NM                
+               N                  N          MMMM     MM    MM   MM             
+                 MMMMM                   MMM      NNM    NM    MN  MN           
+              M    NMMNMMN              M       MM     MM   MMM   M             
+             MM    M        MMMNMMMMM         MM    MMM   MM   MM  MMM          
+               MM   NMM                     N     NM    MM   MM  MM   MN        
+            M    MM   MMMMM                M    MM     M   NM  MM   MN          
+           MMNMM   MMM    MMMMMMM     M  MMMMMMM    MMM  MN    M  MM  MM        
+            MMMMM   MMNM    MMMMNNMMNMNMMMNN       MMM      MMN     MM          
+         MM      MM    MMMM                      MMMM    MMM    MMM    MM       
+           MM  M   MMM     MM                MMMMMNM   MMMM  MMM    MMMN        
+        M   MM  MM   MMM     MMMMMMMMMMMM   MMNNM    MNMM   MM    MM      M     
+      M  MM   M   MM    NM       M    NMMMMMMMN N    NNM   M   MMM   MN NM      
+       M  MN  MMM  MMMN  MMMN             MMNMM    MMM   MMM  MM   MM    M      
+     M  NN  MM  MMM  MNM    MNMMMMMMMMMMMNMMM    MMMM  MMM   MM  MM   NM   MM   
+      M   M   MM  MM   MMM        M MMMMMMM    MMMM   MMM  NMM  MM  NM  MMM     
+       MM  NM  MM  MM    NMMM                       MMM   MM   NN  MM  MM  NMM  
+      M  MM  MM  MN  MM    MMNMMNM                MMN   MMM   MM  M  MN  NM     
+       N  MM   M  MM  MMM      MMMNMM          MNMM   MNM MM MMMMM  M  NMN MM   
+         M  MMMNM  MMM   MMM    MMMMMMMMM M  MMMMM   MMM  MM  MM  MM MMN  M     
+      MM  MM MM  M   MMM  MMMM    MMMNNMNMMMMMMNM   MM  MMM  M   MM MM  M   M   
+    MM MMM MM  MM  M   MM   MM     M MMMMNMMNMMM   MMM MM   NM MM  MN NM  M  M  
+      MM NM  N  MM  MM  MM   MMM     MMMMMMNMM      NMMNMMMM MM  NM MM  MM MM   
+    MM  M  MN MM  N  MM  MM   MMM    MMMMMMMMN    MMMM  MM  MM  M  NM MM MM     
+   M  MM MM MM  M  MN NMM MMM   MMM   MMMMMM   MMMMM   MM  MM NM  M  MM M  M    
+    MMM M  MMMNM M  MM  MM  MM   MMM  NMMNMMMNMMM  MMMM  MM  NM MN MM MM  M MN  
+   MMMMMMMM NM M  M  MM  MN  NMM  MM    MMMMMMN   MMMMNNMM MNNMMM MM MN MM  M   
+  MMMNM MM M  N MM MNM MN MM   NM  MMM   MNM     MN   MMMMM  MM MM MM  MM MN  M 
+  M MMMMM M MMN  N M NM MM  MM  MMM  MM         MM  MNMMMMMMMM MMMM  MM  M MM   
+   M MMMMMMN M M NM M MM  N  NM M MM  NM      MMM     MN  MMMMN M MMMN NMMMM  M 
+  MMMMNM M MM M N M M M MM M  M  M NM  MNM MMMMM   MMMMMMM MM MM M NNMM NM MM   
+   MNMMMM M MM M M N MMMMMN M  M MM  MM  NNMMM   MMMN MMMMMMMMM MMM N MM MM   M 
+  MNMN M NMM  M M M M M MM N MM M MM M MN MM NMMMNMMMNMMMM MMMMM NMMMMMNM M M   
+   MMMM M MN M M M N M MM M MMMM MM M M  MMMMMMMM MMMMMMMMM   MMMMMM NM M MM M  
+ M N M N MM M N M M M MM N M M M M M MMMMMMM NMNMMM MN MN  M MMNMMMMMMN MM M  M 
+  M MNMM M M N M MM MMM N M N MMM MMNMMNMMMMMMMMM  NNMMMMMNN MM MMNMM MM M  M   
+   MMMM M M M M  M M MM M N N M M M NN MNMMMMMMNMMMN MNMM NMMMM MMMMMM M MM M   
+   MMM M MMMM MNMM MMM M M M NM MN NMN MMMMM MMMMMMMMM MMMMM  M M NMMM MM M MN  
+  M MNMMMMMMM MM M M M M M M MMMNMMMMM MN MMNMMM  MNMMMM   MMMN M M MM M  M     
+  MMM N MM M MN MM M M M M M MM MM MMMM M MMMNMMMMMMMMNNMMMMMNMM NMMM M M M     
+   MMMM NMMM MM M NM N NMM M M MN  M MM MM MNMMMMMMMMNMNN     M MMMNM N N N     
+   M NMMM MMMMM M MM M  MM M NNMMMNMM NMMM MMM M  MMM   NMMNM MM  MM M MMN      
+   MMMMMMMM M N N MMN M MMMN MMMNMN MMMM  MM MM MMN MMMMMMM    MMN NM  M        
+    MM MN M M N M M M N M  M MMM MM MN MMMMMM  MM  MMN      MMMMMMM  M M M      
+    MM MMMM M M M M M M MN M N M  MMMMM MM M MM  MMM  MMMMMMMNNM  MM MM M       
+     M MM M M M M M M  M M M N MNMMN  MM NM NM MMM  MMMM    M  MMM  M           
+    MMMMM M M M  MMM M M M MM M MMM M  MN MN  NM  MMM    M M    NN  M  M        
+      N N M M  M M M M MM M M NM NM MNM MMM MM  MMN   MMNMMNMM   MM  M          
+      MMN NM M M M N  M N M  M MM  M  MMN NMM  MMM          MMMM  MM N          
+       M M M M    M N M  M M  M MM  MM  NMMM  MM              MM   M            
+       MM M NM  M MM N M M MM  M  MM NMM M  NNM    MMNMMNN    NM  NM            
+         M M MM MM M  M MMN MN  MN MM  MMN MM   MMMMMMMMMMM   NN                
+          M M MM MM MM M  MM MM  MN   MM   MM  MMMMNMNMMMM     M                
+         M MMMM MM M    NN MM  MN  MMN  NMNM   MNM N MMMMMM                     
+             M MM M   MM  MM MMM  MM   NMM    MMNMM    MMMM                     
+               M MM MM  MM  MM   NMM     N   MMNM                               
+                  MMM  NM  MMM  NNM     MMMMMM MMMMMM                           
+                        N  MM   MMM     MM                                      
+                                 M                                              
+                                                                                
+                                                                                
