@@ -10,6 +10,8 @@ T = TypeVar("T", bound="Fingerprint")  # Generic type that must be a subclass of
 class Fingerprint:
     """Class to represent a fingerprint with associated metadata."""
 
+    match_threshold = 0.9
+
     def __init__(self, data: list[list[str]], name: str, year: int, rows: int, cols: int) -> None:
         """
         Initialize a Fingerprint object with the given data and metadata.
@@ -21,54 +23,32 @@ class Fingerprint:
             rows (int): Number of rows in the fingerprint data
             cols (int): Number of columns in the fingerprint data
         """
-        # Class variable default is defined below; store a copy of the data
-        # Make a deep copy so external mutations don't affect the stored image
-        self._image = [list(row) for row in data]
+        self._data = [row[:] for row in data]
         self._name = name
         self._year = year
         self._rows = rows
         self._cols = cols
-
-    # default match threshold (class variable)
-    match_threshold: float = 0.9
 
     @classmethod
     def from_file(cls: type[T], filename: str) -> T:
         """
         Create a Fingerprint object by reading fingerprint data from the file."""
         with open(filename, "r", encoding="utf-8") as f:
-            lines = f.read().splitlines()
-
-        if len(lines) < 4:
-            raise ValueError("Fingerprint file must contain at least 4 header lines")
-
-        name = lines[0].strip()
-        year = int(lines[1].strip())
-        rows = int(lines[2].strip())
-        cols = int(lines[3].strip())
-
-        # Concatenate the rest of the lines and ignore all whitespace characters
-        raw = "".join(lines[4:])
-        chars = [c for c in raw if not c.isspace()]
-
-        needed = rows * cols
-        if len(chars) < needed:
-            raise ValueError("Not enough pixel data in fingerprint file")
-
-        # Build 2D list row-major
-        data: list[list[str]] = []
-        for r in range(rows):
-            start = r * cols
-            end = start + cols
-            data.append(chars[start:end])
-
+            name = f.readline().strip()
+            year = int(f.readline().strip())
+            rows = int(f.readline().strip())
+            cols = int(f.readline().strip())
+            chars = []
+            for line in f:
+                for c in line:
+                    if not c.isspace():
+                        chars.append(c)
+            data = [chars[i * cols:(i + 1) * cols] for i in range(rows)]
         return cls(data, name, year, rows, cols)
 
-    # Properties
     @property
     def image(self) -> list[list[str]]:
-        # Return a deep copy to prevent external mutation
-        return [list(row) for row in self._image]
+        return [row[:] for row in self._data]
 
     @property
     def rows(self) -> int:
@@ -90,22 +70,14 @@ class Fingerprint:
         return f"Fingerprint for: {self._name}. Year recorded: {self._year}"
 
     def __eq__(self, other: object) -> bool:
-        # Return False if other is not a Fingerprint
         if not isinstance(other, Fingerprint):
             return False
-
-        # Return False if rows/cols differ
-        if self.rows != other.rows or self.cols != other.cols:
+        if self._rows != other._rows or self._cols != other._cols:
             return False
-
-        # Compare pixel-by-pixel
-        total = self.rows * self.cols
-        equal = 0
-        for r in range(self.rows):
-            for c in range(self.cols):
-                if self._image[r][c] == other._image[r][c]:
-                    equal += 1
-
-        percent = equal / total if total > 0 else 0.0
-
-        return percent >= self.match_threshold
+        matches = sum(
+            self._data[r][c] == other._data[r][c]
+            for r in range(self._rows)
+            for c in range(self._cols)
+        )
+        total = self._rows * self._cols
+        return matches / total >= self.match_threshold
