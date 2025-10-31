@@ -12,7 +12,7 @@ class Fingerprint:
 
     match_threshold = 0.9
 
-    def __init__(self, data: list[list[str]], name: str, year: int, rows: int, cols: int) -> None:
+    def __init__(self, data: list[list[str]] | list[str], name: str, year: int, rows: int, cols: int) -> None:
         """
         Initialize a Fingerprint object with the given data and metadata.
 
@@ -23,7 +23,14 @@ class Fingerprint:
             rows (int): Number of rows in the fingerprint data
             cols (int): Number of columns in the fingerprint data
         """
-        self._data = [row[:] for row in data]
+        norm: list[list[str]] = []
+        for r in range(rows):
+            row = data[r] if r < len(data) else []
+            row_chars = list(row) if isinstance(row, str) else list(row)
+            row_chars = (row_chars + [""] * cols)[:cols]
+            norm.append(row_chars)
+
+        self._data = [row[:] for row in norm]
         self._name = name
         self._year = year
         self._rows = rows
@@ -38,7 +45,7 @@ class Fingerprint:
             year = int(f.readline().strip())
             rows = int(f.readline().strip())
             cols = int(f.readline().strip())
-            chars = []
+            chars: list[str] = []
             for line in f:
                 for c in line:
                     if not c.isspace():
@@ -47,8 +54,8 @@ class Fingerprint:
         return cls(data, name, year, rows, cols)
 
     @property
-    def image(self) -> list[list[str]]:
-        return [row[:] for row in self._data]
+    def image(self) -> str:
+        return "\n".join("".join(row) for row in self._data)
 
     @property
     def rows(self) -> int:
@@ -74,10 +81,8 @@ class Fingerprint:
             return False
         if self._rows != other._rows or self._cols != other._cols:
             return False
-        matches = sum(
-            self._data[r][c] == other._data[r][c]
-            for r in range(self._rows)
-            for c in range(self._cols)
-        )
+        a = self.image.replace("\n", "")
+        b = other.image.replace("\n", "")
         total = self._rows * self._cols
+        matches = sum(a[i] == b[i] for i in range(total))
         return matches / total >= self.match_threshold
