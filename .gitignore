@@ -204,3 +204,11 @@ Fingerprint_UML.png
 
 # Any temporary output from running tests
 *.tmp
+
+# --- Project cleanup ignores ---
+.vscode/
+Summary.md
+README.md
+generate_coverage_reports.sh
+test_runner.py
+.coveragerc
