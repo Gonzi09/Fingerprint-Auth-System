@@ -177,3 +177,30 @@ cython_debug/
 
 # macOS DS_Store files
 .DS_Store
+
+
+# VSCode workspace settings
+.vscode/
+
+.grade.yml
+generate_coverage_report.sh
+
+# Coverage output from the assignment runner
+coverage_reports/
+generate_coverage_reports/
+generate_coverage_rep*/
+
+# Test runner cache
+test_runner.pyc
+
+# Fingerprint UML diagram if you don’t want to upload it
+Fingerprint_UML.png
+
+# Mypy cache (already included but ensuring duplicate is okay)
+.mypy_cache/
+
+# Logs
+*.log
+
+# Any temporary output from running tests
+*.tmp
